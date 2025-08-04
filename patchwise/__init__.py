@@ -8,8 +8,8 @@ PACKAGE_PATH = Path(__file__).resolve().parent
 
 PACKAGE_NAME = __name__.split(".")[0]
 
-# Define the sandbox/workspace path relative to the package location
-SANDBOX_PATH = PACKAGE_PATH / "sandbox"
+# Define the sandbox/workspace path in tmp directory
+SANDBOX_PATH = Path("/tmp") / PACKAGE_NAME / "sandbox"
 SANDBOX_BIN = SANDBOX_PATH / "bin"
 # Define the kernel workspace path
 KERNEL_PATH = SANDBOX_PATH / "kernel"
